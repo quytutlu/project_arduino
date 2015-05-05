@@ -21,6 +21,9 @@
 				Display("success",$XuLyNV->TatThietBi($_GET["idthietbi"]));
 			}
 			break;
+		case "laytrangthaianalog":
+			Display("list",$XuLyNV->LayTrangThaiAnalog());
+			break;
 		case "laytrangthaiarduino":
 			if(isset($_GET["a1"])&&isset($_GET["a2"])&&isset($_GET["a3"])){
 				Display("list",$XuLyNV->LayTrangThaiArduino($_GET["a1"],$_GET["a2"],$_GET["a3"]));

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 05, 2015 at 05:38 PM
+-- Generation Time: May 05, 2015 at 06:56 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -39,8 +39,16 @@ end$$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `LayTrangThai`()
 begin
 	select *
-    from thietbi;
+    from thietbi
+    WHERE thietbi.ReadOnly=0;
 end$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `LayTrangThaiAnalog`()
+BEGIN
+	SELECT *
+    from thietbi
+    WHERE thietbi.ReadOnly=1;
+END$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `LayTrangThaiArduino`(IN `a1` VARCHAR(50), IN `a2` VARCHAR(50), IN `a3` VARCHAR(50))
 begin
@@ -83,9 +91,9 @@ INSERT INTO `thietbi` (`id`, `TenThietBi`, `TrangThai`, `TenVietTat`, `ReadOnly`
 (7, 'Thiết bị 3', '0', 'dr3', 0),
 (8, 'Thiết bị 4', '0', 'dr4', 0),
 (9, 'Thiết bị 5', '0', 'dr5', 0),
-(11, 'Analog 1', '11', 'an1', 1),
-(12, 'Analog 2', '21', 'an2', 1),
-(13, 'Analog 3', '33', 'an3', 1);
+(11, 'Analog 1', '15', 'an1', 1),
+(12, 'Analog 2', '22', 'an2', 1),
+(13, 'Analog 3', '44', 'an3', 1);
 
 -- --------------------------------------------------------
 

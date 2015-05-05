@@ -29,6 +29,18 @@
 			}
 			return $ListTrangThai;
 		}
+		public function LayTrangThaiAnalog(){
+			$kq=$this->ThaoTacCSDL->LayTrangThaiAnalog();
+			$ListTrangThai;
+			while($row=mysql_fetch_array($kq))
+			{
+				$temp=new TrangThaiArduino();
+				$temp->TenThietBi=$row[1];
+				$temp->TrangThai=$row[2];
+				$ListTrangThai[]=$temp;
+			}
+			return $ListTrangThai;
+		}
 		public function LayTrangThaiArduino($a1,$a2,$a3){
 			$kq=$this->ThaoTacCSDL->LayTrangThaiArduino($a1,$a2,$a3);
 			$ListTrangThai;

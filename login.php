@@ -43,8 +43,8 @@
 			</div>
 		</div>
 	</form>
-	<script type='text/javascript' src='jquery-1.9.1.js'></script>
-	<script type="text/javascript" src="jquery.session.js"></script>
+	<script type='text/javascript' src='javaScript/jquery-1.9.1.js'></script>
+	<script type="text/javascript" src="javaScript/jquery.session.js"></script>
 </body>
 </html>
 

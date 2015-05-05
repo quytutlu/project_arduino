@@ -29,6 +29,10 @@
 			$sql="Call LayTrangThai()";
 			return mysql_query($sql);
 		}
+		public function LayTrangThaiAnalog(){
+			$sql="Call LayTrangThaiAnalog()";
+			return mysql_query($sql);
+		}
 		public function LayTrangThaiArduino($a1,$a2,$a3){
 			$sql="Call LayTrangThaiArduino(\"".$a1."\",\"".$a2."\",\"".$a3."\")";
 			return mysql_query($sql);
